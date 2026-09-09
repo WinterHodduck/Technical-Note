@@ -1,0 +1,42 @@
+17. 세 수 내림차순 정렬
+다음 세 수를 작은 수부터 큰 수 순서로 출력하시오.
+int a = 30;
+int b = 10;
+int c = 20;
+출력:
+10 20 30
+※ 배열을 사용하지 않습니다.
+※ 반복문을 사용하지 않습니다.
+
+--------------------------------------------------
+
+package assignment0908;
+
+public class Question17 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = 30;
+		int b = 10;
+		int c = 20;
+		if (a > b) {
+			if (a > c) {
+				if (b > c) {
+					System.out.println(a + "/" + b + "/" + c);
+				} else
+					System.out.println(a + "/" + c + "/" + b);
+			} else
+				System.out.println(c + "/" + a + "/" + b);
+		} else {
+			if (b > c) {
+				if (a > c) {
+					System.out.println(b + "/" + a + "/" + c);
+				} else
+					System.out.println(b + "/" + c + "/" + a);
+			} else
+				System.out.println(c + "/" + b + "/" + a);
+		}
+
+	}
+
+}
