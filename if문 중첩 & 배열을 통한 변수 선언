@@ -1,0 +1,54 @@
+15. 절댓값 비교 대결
+정수 3개의 절댓값을 비교하여 절댓값이 가장 큰 수를 출력하시오.
+int a = -10;
+int b = 7;
+int c = 3;
+출력:
+-10
+※ 실제로 출력하는 값은 원래 숫자입니다.
+※ 반복문을 사용하지 않습니다.
+
+----------------------------------------
+
+package assignment0908;
+
+public class Question15 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int a = -10;
+		int b = 7;
+		int c = 3;
+		int[] abs = { a, b, c };
+
+		if (abs[0] < 0) {
+			abs[0] = abs[0] * (-1);
+		}
+		if (b < 0) {
+			abs[1] = b * (-1);
+		}
+		if (c < 0) {
+			abs[2] = c * (-1);
+		}
+	
+		if (abs[0] > abs[1]) {
+			if (abs[0] > abs[2]) {
+				System.out.println(a);
+			} else {
+				System.out.println(c);
+			}
+		} else {
+			if (abs[1] > abs[2]) {
+				System.out.println(b);
+			} else {
+				System.out.println(c);
+			}
+		}
+
+	}
+
+}
+
+- 정리
+1. if문 중첩 가능, 이를 통해 모든 경우의 수 확인 
+2. 자료형이 같은 변수 여러 개를 만드는 상황에서는 아예 배열로 만들어 버리는 선택도 좋음
